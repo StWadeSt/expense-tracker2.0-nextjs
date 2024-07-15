@@ -4,7 +4,7 @@ const Balance = async () => {
     const {balance} = await getUserBalance();
     return ( <>
         <h4>Your Balance</h4>
-        <h1>R{ addCommas( balance ?? 0) }</h1>
+        <h1>R{ addCommas( Number(balance?.toFixed(2)) ?? 0) }</h1>
     </> );
 }
  
